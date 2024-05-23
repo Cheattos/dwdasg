@@ -268,7 +268,7 @@ function Dashboard() {
               {/* card 1 */}
               <div className="">
                 <div className="flex gap-3 pt-16 pb-5">
-                {techlogooffer.map((src, index) => (
+                  {techlogooffer.map((src, index) => (
                     <div key={index}>
                       <img
                         src={src}
@@ -406,7 +406,7 @@ function Dashboard() {
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-5xl font-bold relative">
-                    <span className="me-2 ms-3">
+                    <span className="me-2 ms-2">
                       {addLeadingZero(timeLeft.hours)}{" "}
                     </span>
                     <span className="text-md absolute ms-1">:</span>
@@ -417,7 +417,7 @@ function Dashboard() {
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-5xl font-bold">
-                    <span className="me-2 ms-3">
+                    <span className="me-2 ms-2">
                       {addLeadingZero(timeLeft.minutes)}{" "}
                     </span>
                     <span className="text-md absolute ms-1">:</span>
@@ -428,7 +428,7 @@ function Dashboard() {
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-5xl font-bold md:text-7xl me-4">
-                    <span className="ms-3">
+                    <span className="ms-2">
                       {addLeadingZero(timeLeft.seconds)}{" "}
                     </span>
                   </span>
@@ -438,34 +438,66 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center pt-5">
-              <div
-                className="border-2 rounded-lg"
-                style={{
-                  borderColor: "#a36b68",
-                  backgroundColor: "#F7F3D7",
-                  height: "9rem",
-                  width: "50rem",
-                }}
-              >
-                <div className="grid grid-cols-[auto_1fr]">
-                  <div className="p-7 mt-3">
-                    <img
-                      src="/icon/warning.png"
-                      alt="warning"
-                      className="size-16"
-                    />
-                  </div>
-                  <div className=" text-start">
-                    <p className="pt-5">Syarat Pendaftaran</p>
-                    <div className="ps-5">
-                      <li>
-                        Berusia minimal 18 tahun dan maksimal 26 tahun pada saat
-                        mendaftar
-                      </li>
-                      <li>Pendidikan minimal SMK/SMA/Sederajat</li>
+
+            <div className="hidden md:block">
+              <div className="flex items-center justify-center pt-5 ">
+                <div
+                  className="border-2 rounded-lg"
+                  style={{
+                    borderColor: "#a36b68",
+                    backgroundColor: "#F7F3D7",
+                    height: "9rem",
+                    width: "50rem",
+                  }}
+                >
+                  <div className="grid grid-cols-[auto_1fr]">
+                    <div className="p-7 mt-3">
+                      <img
+                        src="/icon/warning.png"
+                        alt="warning"
+                        className="size-16"
+                      />
                     </div>
-                    <p className="text-blue-600">Selengkapnya lihat di FAQ</p>
+                    <div className="text-start">
+                      <p className="pt-5">Syarat Pendaftaran</p>
+                      <div className="ps-5">
+                        <li>
+                          Berusia minimal 18 tahun dan maksimal 26 tahun pada
+                          saat mendaftar
+                        </li>
+                        <li>Pendidikan minimal SMK/SMA/Sederajat</li>
+                      </div>
+                      <p className="text-blue-600">Selengkapnya lihat di FAQ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* mobile */}
+            <div className="block md:hidden">
+              <div className="flex items-center justify-center pt-5 p-3">
+                <div
+                  className="border-2 rounded-lg bg-amber-50 border-yellow-800 h-auto"
+                >
+                  <div className="grid grid-cols-[auto_1fr]">
+                    <div className="p-7 mt-3">
+                      <img
+                        src="/icon/warning.png"
+                        alt="warning"
+                        className="size-16"
+                      />
+                    </div>
+                    <div className="text-start">
+                      <p className="pt-2">Syarat Pendaftaran</p>
+                      <div className="ps-5">
+                        <li>
+                          Berusia minimal 18 tahun dan maksimal 26 tahun pada
+                          saat mendaftar
+                        </li>
+                        <li>Pendidikan minimal SMK/SMA/Sederajat</li>
+                      </div>
+                      <p className="text-blue-600 pb-2">Selengkapnya lihat di FAQ</p>
+                    </div>
                   </div>
                 </div>
               </div>
