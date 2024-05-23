@@ -192,7 +192,13 @@ function Dashboard() {
               <div className="ms-32">
                 <div className="flex gap-3 pt-16 ps-64 pb-5">
                   {techlogooffer.map((src, index) => (
-                    <img src={src} alt={`Image ${index}`} className="size-6" />
+                    <div key={index}>
+                      <img
+                        src={src}
+                        alt={`Image ${index}`}
+                        className="size-6"
+                      />
+                    </div>
                   ))}
                   <img src="/techlogo/bznet.png" alt="bznet" className="h-6" />
                 </div>
@@ -262,8 +268,14 @@ function Dashboard() {
               {/* card 1 */}
               <div className="">
                 <div className="flex gap-3 pt-16 pb-5">
-                  {techlogooffer.map((src, index) => (
-                    <img src={src} alt={`Image ${index}`} className="size-12" />
+                {techlogooffer.map((src, index) => (
+                    <div key={index}>
+                      <img
+                        src={src}
+                        alt={`Image ${index}`}
+                        className="size-6"
+                      />
+                    </div>
                   ))}
                   <img src="/techlogo/bznet.png" alt="bznet" className="h-10" />
                 </div>
@@ -466,7 +478,9 @@ function Dashboard() {
               Kami Berdiri <span className="dwcolor">Sejak 2017</span> untuk
               Selalu Menjadi
             </h1>
-            <h1 className="dwcolor text-3xl font-black mb-3 mt-1">Solusi Bagi Pencari Kerja!</h1>
+            <h1 className="dwcolor text-3xl font-black mb-3 mt-1">
+              Solusi Bagi Pencari Kerja!
+            </h1>
             <p className="tracking-widest">
               Berikut adalah statistik kami dengan konsistensi kami sebagai
               Bootcamp jaminan di Indonesia.
@@ -475,25 +489,21 @@ function Dashboard() {
               <div className="flex sm:flex-row justify-center space-x-4 space-y-0">
                 <div className="flex flex-col items-center">
                   <span className="font-bold md:text-5xl text-black">
-                    <span className="me-6">
-                      560+
-                    </span>{" "}
+                    <span className="me-6">560+</span>{" "}
                   </span>
                   <span className="text-xl md:me-10 text-black">Alumni</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="font-bold md:text-5xl text-black">
-                    <span className="me-6">
-                      370+
-                    </span>{" "}
+                    <span className="me-6">370+</span>{" "}
                   </span>
-                  <span className="text-xl md:me-10 text-black">Hiring Partners</span>
+                  <span className="text-xl md:me-10 text-black">
+                    Hiring Partners
+                  </span>
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="font-bold md:text-5xl text-black">
-                    <span className="me-6">
-                     52
-                    </span>{" "}
+                    <span className="me-6">52</span>{" "}
                   </span>
                   <span className="text-xl md:me-5 text-black">Batch</span>
                 </div>
