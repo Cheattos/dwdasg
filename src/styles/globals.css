@@ -39,6 +39,14 @@ body {
   color: #FE4E30;
 }
 
+.dwbg {
+  background-color: #FE4E30;
+}
+
+.logoSize {
+  height: 30px;
+}
+
 .slick-slide img {
   margin: auto;
 }
